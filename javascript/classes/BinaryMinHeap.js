@@ -8,6 +8,7 @@ class BinaryMinHeap {
   constructor(comparisonFunction = ascendingComparator) {
     this.store = [];
     this.count = this.count.bind(this); // for safety
+    this.getStore = this.getStore.bind(this); // for safety
     this.comparisonFunction = comparisonFunction;
   }
 
@@ -19,6 +20,10 @@ class BinaryMinHeap {
   // O(1)
   peek() {
     return this.store[0];
+  }
+
+  getStore() {
+    return this.store;
   }
 
   // O(log n)

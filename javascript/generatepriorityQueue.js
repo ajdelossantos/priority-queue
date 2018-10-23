@@ -1,4 +1,3 @@
-const BinaryMinHeap = require('./classes/BinaryMinHeap');
 const testData = require('./test_data/testData.json');
 const fs = require('fs');
 
