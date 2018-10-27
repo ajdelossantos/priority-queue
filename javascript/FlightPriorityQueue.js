@@ -30,10 +30,26 @@ const comparePassengers = (currentPassenger, nextPassenger) => {
   }
 };
 
-const flightPriorityQueue = new BinaryMinHeap(comparePassengers);
+// const flightPriorityQueue = new BinaryMinHeap(comparePassengers);
 
-testData.forEach((passenger, idx) => {
-  if (idx < testData.length - 1)
-    console.log(comparePassengers(passenger, testData[idx + 1]));
-});
+class FlightPriorityQueue {
+  constructor() {
+    this.store = [];
+  }
+
+  enqueue() {
+    return false;
+  }
+
+  generateBoardingList() {
+    return [];
+  }
+}
+
+// testData.forEach((passenger, idx) => {
+//   if (idx < testData.length - 1)
+//     console.log(comparePassengers(passenger, testData[idx + 1]));
+// });
 // testData.forEach(passenger => flightPriorityQueue.push(passenger));
+
+module.exports = FlightPriorityQueue;
